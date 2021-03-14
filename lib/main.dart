@@ -34,6 +34,14 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  var ball = 1;
+  var max = 18;
+  void change() {
+    setState(() {
+      ball = Random().nextInt(max) + 1;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -41,12 +49,8 @@ class _MyAppState extends State<MyApp> {
         children: <Widget>[
           Expanded(
             child: Image.asset(
-              'images/ball1.png',
+              'images/ball$ball.png',
             ),
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: <Widget>[],
           ),
         ],
       ),

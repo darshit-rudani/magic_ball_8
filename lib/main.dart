@@ -52,6 +52,27 @@ class _MyAppState extends State<MyApp> {
               'images/ball$ball.png',
             ),
           ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: <Widget>[
+              SizedBox(
+                width: 80.0,
+                height: 80.0,
+                child: FloatingActionButton(
+                  backgroundColor: Colors.indigo.shade700,
+                  tooltip: 'Increment Counter',
+                  onPressed: () {
+                    change();
+                  },
+                  child: const Icon(
+                    Icons.contact_support_outlined,
+                    size: 60.0,
+                    color: Colors.deepOrange,
+                  ),
+                ),
+              )
+            ],
+          ),
         ],
       ),
     );
